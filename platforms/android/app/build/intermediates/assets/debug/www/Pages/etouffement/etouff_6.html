@@ -7,6 +7,7 @@
         <script src="../../js/jquery-3.2.1.js"></script>
         <script src='../../js/index.js' type="text/javascript"></script>
         <script src='../../js/bddstat.js' type="text/javascript"></script>
+        <script src='../../js/sweetalert2.js' type="text/javascript"></script>
         <title>71% Left</title>
     </head>
     <body>
@@ -17,11 +18,26 @@
         </div>
         <br/>
         <br/>
-        <a href="etouff_7.html"><button type="button">Maintenir vos coudes écartées au maximum</button></a> 
+        <a href="etouff_7.html"><button type="button" id="e60" class="answer">Maintenir vos coudes écartées au maximum</button></a> 
          <br/>
          <br/>
-         <button type="button">Placer votre poing fermé sur l'estomac</button>
+         <button type="button" id="e61" class="answer">Maintenir vos coudes écartées au minimum</button>
          <br/>
          <br/>
     </body>
+    <script type="text/javascript">
+$('#e61').click(function(){        
+swal({
+    title: "Perdu!",
+    text: "Aïe! Il faut écarter ses coudes au maximum afin que la manoeuvre de Heimlich est la plus grande amplitude possible.",
+    type: "error"
+}).then(function() {
+    window.location = "etouff_7.html";
+});
+
+});
+
+
+
+    </script>
 </html>

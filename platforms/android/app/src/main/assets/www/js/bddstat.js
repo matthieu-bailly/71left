@@ -1,20 +1,60 @@
 $(document).ready(function(){
 
+$(".answer").on('click',function(){
 
-$("#launch_acci").on('click',function(){
-
+        
         $.ajax({
-            type : "POST",
-            url : 'http://cadusoft.sites.iut-velizy.uvsq.fr/appcontrol.php',
-            data : {envoi : "oui"},
-            success : function(retour)
-            {
-               alert('tester la base de données -- entrée accomplie');
 
-            }
-        })
+      type: "POST",
+      url : 'http://venus.iut-velizy.uvsq.fr/~mbailly/php/cordova_traitement.php',
+      data : {order : $(this).attr('id')},
+      success: function(retour)
+      {
+        console.log(retour);
+
+      }
 
     });
+});
+
+
+$(".done").on('click',function(){
+
+
+
+        
+        $.ajax({
+
+      type: "POST",
+      url : 'http://venus.iut-velizy.uvsq.fr/~mbailly/php/cordova_traitement.php',
+      data : {order : $(this).attr('id')},
+      success: function(retour)
+      {
+        alert(retour);
+
+      }
+
+    });
+});
+
+$('#pourcentage').on('click',function(){
+$.ajax({
+
+      type: "POST",
+      url : 'http://venus.iut-velizy.uvsq.fr/~mbailly/php/cordova_traitement.php',
+      data : {order : "stat1"},
+      success: function(retour)
+      {
+        $('#pourcentageres').html(retour);
+
+      }
+
+    });
+
+});
+
+
+
 
 
 
