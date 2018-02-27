@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
-    <title>Localisation équipements 71% Left</title>
+    <title>Localisation équipements 71%</title>
     <style>
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
@@ -36,22 +36,37 @@
         var marker = new google.maps.Marker({
           position: myLatLng,
           map: map,
-          title: 'Decathlon'
+          title: 'Vous pourrez essayer ici notre logiciel 71% Left'
         }); //Placement d'un nouveau marqueur au centre
 
 		var marker = new google.maps.Marker({
           position: marqueur,
           map: map,
-          title: 'Velizy2'
+          title: 'Vous pourrez essayer ici notre logiciel 71% Left'
         }); //Placement d'un nouveau marqueur à Velizy 2
 
         var marker = new google.maps.Marker({
           position: marqueur2,
           map: map,
-          title: 'Hopital Antoine Béclert'
+          title: 'Vous pourrez essayer ici notre logiciel 71% Left'
         }); //Placement d'un nouveau marqueur à l'hopital Antoine-Béclert
 
+
+map.addListener('center_changed', function() {
+          // 3 seconds after the center of the map has changed, pan back to the
+          // marker.
+          window.setTimeout(function() {
+            map.panTo(marker.getPosition());
+          }, 1000);
+        });
+
+        marker.addListener('click', function() {
+          map.setZoom(8);
+          map.setCenter(marker.getPosition());
+        });
+
       }
+
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7dYhiFnt8wm-4XE3eSPxO43cI9pkRpPI&callback=initMap">
