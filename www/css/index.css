@@ -1,18 +1,59 @@
-.texte_question
-{
-
-	border: 3px black dashed;
-	text-align: center;
-}
-
 html, body 
 {
 		height: 100%;
 		margin: 0;
-		padding: 0
+		padding: 0;
+		text-align:center;
+		letter-spacing:auto;
+
 }
 
 #EmplacementDeMaCarte 
 {
-		height: 100%
+		height: 100%;
 }
+
+.btn, .btn a{
+	width:60%;
+	min-height:11%;
+	margin-top:1vh;
+	margin-bottom:1vh;
+	text-align:center;
+	color:white;
+	
+}
+
+#titremenu{
+	letter-spacing: -2px;
+	font-size:2em;
+	margin:auto;
+}
+
+.previous{
+	list-style:none;
+	background-color:#cacfd2;
+}
+
+.arrows{
+	color: #5dade2;
+	font-size:1.5em;
+}
+
+/* Style des paragraphe des textes de fin et des textes explicatfs*/
+.textefinal{
+	width:75%;
+	padding:25px;
+	margin:auto;
+}
+
+/*Style des textes énoncés*/
+.texte_question{
+
+	width:70%;
+	padding:25px;
+	margin:auto;
+	background-color:#415b76;
+	color:white;
+	border-radius:6px;
+}
+
