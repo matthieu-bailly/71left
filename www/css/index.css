@@ -23,10 +23,13 @@ html, body
 	
 }
 
+/* 71% LEFT*/
 #titremenu{
 	letter-spacing: -2px;
 	font-size:2em;
 	margin:auto;
+	margin-top:5vh;
+	margin-bottom:5vh;
 }
 
 .previous{
@@ -37,6 +40,13 @@ html, body
 .arrows{
 	color: #5dade2;
 	font-size:1.5em;
+}
+
+.precedent{
+	color: #5dade2;
+	font-size:1.5em;
+	margin-left:-20vh;
+	position:absolute;
 }
 
 /* Style des paragraphe des textes de fin et des textes explicatfs*/
