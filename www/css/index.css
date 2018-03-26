@@ -5,7 +5,16 @@ html, body
 		padding: 0;
 		text-align:center;
 		letter-spacing:auto;
+		font-family:lato,Arial;
 
+}
+
+@font-face {
+font-family: 'lato';
+src: url('../fonts/lato.ttf');
+src: url('../fonts/lato-light.ttf');
+src: url('../fonts/lato-black.ttf');
+src: url('../fonts/lato-regular.ttf');
 }
 
 #EmplacementDeMaCarte 
@@ -45,7 +54,7 @@ html, body
 .precedent{
 	color: #5dade2;
 	font-size:1.5em;
-	margin-left:-20vh;
+	margin-left:-35%;
 	position:absolute;
 }
 
@@ -58,7 +67,6 @@ html, body
 
 /*Style des textes énoncés*/
 .texte_question{
-
 	width:70%;
 	padding:25px;
 	margin:auto;
