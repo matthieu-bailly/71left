@@ -5,9 +5,10 @@ html, body
 		padding: 0;
 		text-align:center;
 		letter-spacing:auto;
-		font-family:lato,Arial;
+		font-family:Lato,Arial;
 
 }
+
 
 @font-face {
 font-family: 'lato';
@@ -75,3 +76,10 @@ src: url('../fonts/lato-regular.ttf');
 	border-radius:6px;
 }
 
+.logoiut{
+	max-width:60%;
+}
+
+.etapespls{
+	max-width:90%;
+}
