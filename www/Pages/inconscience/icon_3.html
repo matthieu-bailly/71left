@@ -7,6 +7,7 @@
         <script src="../../js/jquery-3.2.1.js"></script>
         <script src='../../js/index.js' type="text/javascript"></script>
         <script src='../../js/bddstat.js' type="text/javascript"></script>
+        <script src='../../js/sweetalert2.js' type="text/javascript"></script>
         <title>71% Left</title>
     </head>
     <body>
@@ -15,11 +16,26 @@
         <div class="texte_question">
         Maintenant que vous avez placé la tête, il va falloir s’occuper du bas du corps. Il va d’abord falloir s’occuper des mains de la victime. Faut-il maintenir une de mains de la victime placée contre son oreille ou son abdomen?
         </div>
-        <a href="icon_4.html"><button type="button">Maintener la main de la victime contre son oreille</button></a> 
+        <a href="icon_4.html"><button type="button" id="i30" class="answer">Maintener la main de la victime contre son oreille</button></a> 
          <br/>
          <br/>
-         <button type="button">Maintener la main de la victime contre son abdomen</button>
+         <button type="button" id="i31" class="answer">Maintener la main de la victime contre son abdomen</button>
          <br/>
          <br/>
     </body>
+      <script type="text/javascript">
+$('#i31').click(function(){        
+swal({
+    title: "Perdu!",
+    text: "Raté! Il faut placer la main de la victime placée contre son oreille.",
+    type: "error"
+}).then(function() {
+    window.location = "icon_4.html";
+});
+
+});
+
+
+
+    </script> 
 </html>

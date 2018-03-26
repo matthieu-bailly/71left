@@ -7,19 +7,29 @@
         <script src="../../js/jquery-3.2.1.js"></script>
         <script src='../../js/index.js' type="text/javascript"></script>
         <script src='../../js/bddstat.js' type="text/javascript"></script>
+        <script src='../../js/sweetalert2.js' type="text/javascript"></script>
         <title>71% Left</title>
     </head>
     <body>
         <a href="../../index.html"><img src="../../img/fleche.png" alt="fleche de redirection"/></a>
         <br/>
         <div class="texte_question">
-        Vous allez maintenant vérifier l’état de la victime, voici la procédure : 
+        Vous allez maintenant vérifier l’état de la victime. Présentez-vous et expliquez à la victime ce que vous allez faire afin de la rassurer. Vérifiez qu'elle est consciente et respire normalement (cf. quiz sur l'inconscience). Le pronostic vital est souvent en jeu en cas d'altération de la conscience ou de la respiration. Ces éléments seront à transmettre aux secours.
         </div>
-      <button type="button" id="a21" class="answer">Soutenir son abdomen avec votre main</button>
-         <br/>
-         <br/>
-         <a href="acci_3.html"><button type="button" id="a20" class="answer">Soutenir son thorax avec votre main </button></a> 
-         <br/>
-         <br/>
     </body>
+<script type="text/javascript">
+$('#a21').click(function(){        
+swal({
+    title: "A retenir !",
+    text: "Votre rôle est de préparer l'arrivée des secours, même en état de stress, il vous faut glaner le maximum d'informations à leur transmettre.",
+    icon: "info"
+}).then(function() {
+    window.location = "acci_3.html";
+});
+
+});
+
+
+
+    </script>    
 </html>
