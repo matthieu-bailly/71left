@@ -9,6 +9,7 @@
         <script src="../../js/jquery-3.2.1.js"></script>
         <script src='../../js/index.js' type="text/javascript"></script>
         <script src='../../js/bddstat.js' type="text/javascript"></script>
+        <script src='../../js/sweetalert2.js' type="text/javascript"></script>
         <title>71% Left</title>
     </head>
     <body>
@@ -25,12 +26,29 @@
         <div class="texte_question">
         En rentrant chez vous, vous découvrez votre frère étendu sur la pallier. Il semble être inconscient. Que faîtes-vous dans cette situation ? Vous appelez les secours ou vous prenez le pouls de la victime ?
         </div>
+
         <br/>
         <a href="icon_2.html"><button type="button" class="btn btn-block btn-lg btn-info">Prendre le pouls de la victime </button></a> 
          <br/>
          <br/>
          <button type="button" class="btn btn-block btn-lg btn-info">Se rapprocher de la bouche de la victime</button>
+
          <br/>
          <br/>
     </body>
+    <script type="text/javascript">
+$('#i11').click(function(){        
+swal({
+    title: "Perdu!",
+    text: "Faux! Dans cette situation, il faut d’abord prendre le pouls de la victime.",
+    type: "error"
+}).then(function() {
+    window.location = "icon_2.html";
+});
+
+});
+
+
+
+    </script>    
 </html>

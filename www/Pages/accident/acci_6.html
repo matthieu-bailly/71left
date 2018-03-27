@@ -9,6 +9,7 @@
         <script src="../../js/jquery-3.2.1.js"></script>
         <script src='../../js/index.js' type="text/javascript"></script>
         <script src='../../js/bddstat.js' type="text/javascript"></script>
+        <script src='../../js/sweetalert2.js' type="text/javascript"></script>
         <title>71% Left</title>
     </head>
     <body>
@@ -29,7 +30,9 @@
       <button type="button" id="a61" class="answer btn btn-block btn-lg btn-info">Ne rien faire</button>  
          <br/>
          <br/>
+
          <button type="button" id="a60" class="answer btn btn-block btn-lg btn-info">Couvrir la personne </button> 
+
          <br/>
          <br/>
          <button type="button" id="a61" class="answer btn btn-block btn-lg btn-info">Faire boire la victime </button> 
@@ -39,4 +42,18 @@
          <br/>
          <br/>
     </body>
+    <script type="text/javascript">
+$('#a61').click(function(){        
+swal({
+    title: "Perdu!",
+    text: "La seule bonne chose à faire dans ce cas est de couvrir la victime afin de prévenir tout risque d’hypothermie. Faire boire ou chercher les blessures de la victime sont des actions trop risquées pour un non-professionnel.",
+    icon: "error"
+}).then(function() {
+    window.location = "acci_7.html";
+});
+
+});
+
+
+    </script> 
 </html>
