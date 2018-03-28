@@ -1,18 +1,111 @@
-.texte_question
-{
-
-	border: 3px black dashed;
-	text-align: center;
-}
-
 html, body 
 {
 		height: 100%;
 		margin: 0;
-		padding: 0
+		padding: 0;
+		text-align:center;
+		letter-spacing:auto;
+
+}
+
+
+@font-face {
+font-family: 'lato';
+src: url('www/fonts/lato/lato.ttf');
+src: url('www/fonts/lato/lato-light.ttf');
+src: url('www/fonts/lato/lato-black.ttf');
+src: url('www/fonts/lato/lato-regular.ttf');
 }
 
 #EmplacementDeMaCarte 
 {
-		height: 100%
+		height: 100%;
+}
+
+.btn, .btn a{
+	width:60%;
+	min-height:11%;
+	margin-top:1vh;
+	margin-bottom:1vh;
+	text-align:center;
+	color:white;
+	font-family:Lato,Arial;
+}
+
+/* 71% LEFT*/
+#titremenu{
+	letter-spacing: -2px;
+	font-size:2em;
+	margin:auto;
+	margin-top:5vh;
+	margin-bottom:5vh;
+	font-family:Lato black,Arial;
+}
+
+p{
+	font-family:Lato light,Arial;
+
+}
+
+.gras{
+	font-family:Lato black,Arial;
+}
+
+/*Nav barre*/
+.previous{
+	list-style:none;
+background: #00bf8f;  /* fallback for old browsers */
+
+
+	/*background-color:#cacfd2;*/
+}
+
+.arrows{
+	/*color: #5dade2;*//*BLeu ciel*/
+	color:#cacfd2;
+	font-size:1.5em;
+}
+
+.precedent{
+	/*color: #5dade2;*//*BLeu ciel*/
+	color:#cacfd2;
+	font-size:1.5em;
+	margin-left:-35%;
+	position:absolute;
+}
+
+/* Style des paragraphe des textes de fin et des textes explicatfs*/
+.textefinal{
+	width:75%;
+	padding:25px;
+	margin:auto;
+	font-family:Lato light,Arial;
+}
+
+.textetuto{
+	width:90%;
+	text-align:left;
+	margin:auto;
+	font-family:Lato light,Arial;
+}
+
+/*Style des textes énoncés*/
+.texte_question{
+	width:75%;
+	padding:25px;
+	margin:auto;
+	background-color:#415b76;
+	color:white;
+	border-radius:6px;
+	font-family:Lato light,Arial;
+	font-style:italic;
+	
+}
+
+.logoiut{
+	max-width:60%;
+}
+
+.etapespls{
+	max-width:90%;
 }
