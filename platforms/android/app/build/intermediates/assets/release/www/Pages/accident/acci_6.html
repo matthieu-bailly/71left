@@ -4,28 +4,56 @@
         <meta charset="utf-8">
         <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; connect-src *">
         <link rel="stylesheet" type="text/css" href="../../css/index.css">
+        <link rel="stylesheet" type="text/css" href="../../css/flat-ui.css">
+        <link href="../../fonts/glyphicons/flat-ui-icons-regular.ttf" rel="stylesheet" type="text/css">
         <script src="../../js/jquery-3.2.1.js"></script>
         <script src='../../js/index.js' type="text/javascript"></script>
         <script src='../../js/bddstat.js' type="text/javascript"></script>
+        <script src='../../js/sweetalert2.js' type="text/javascript"></script>
         <title>71% Left</title>
     </head>
     <body>
-        <a href="../../index.html"><img src="../../img/fleche.png" alt="fleche de redirection"/></a>
+        <!-- <a href="../../index.html"><img src="../../img/fleche.png" alt="fleche de redirection"/></a> -->
+        <li class="previous">
+            <a href="../../Niveaux.html">
+                <span class="precedent fui-arrow-left"></span>
+            </a>
+            <a href="../../index.html">
+                <span class="arrows fui-home"></span>
+            </a>
+        </li>
         <br/>
         <div class="texte_question">
         En attendant les secours, vous restez auprès de la victime, le mieux à faire est :
         </div>
-      <button type="button">Ne rien faire</button>  
+        <br/>
+      <button type="button" id="a61" class="answer btn btn-block btn-lg btn-info">Ne rien faire</button>  
          <br/>
          <br/>
-         <button type="button">Couvrir la personne </button> 
+
+         <button type="button" id="a60" class="answer btn btn-block btn-lg btn-info">Couvrir la personne </button> 
+
          <br/>
          <br/>
-         <button type="button">Faire boire la victime </button> 
+         <button type="button" id="a61" class="answer btn btn-block btn-lg btn-info">Faire boire la victime </button> 
          <br/>
          <br/>
-         <button type="button">Chercher les blessures de la victime </button><
+         <button type="button" id="a61" class="answer btn btn-block btn-lg btn-info">Chercher les blessures de la victime </button>
          <br/>
          <br/>
     </body>
+    <script type="text/javascript">
+$('#a61').click(function(){        
+swal({
+    title: "Perdu!",
+    text: "La seule bonne chose à faire dans ce cas est de couvrir la victime afin de prévenir tout risque d’hypothermie. Faire boire ou chercher les blessures de la victime sont des actions trop risquées pour un non-professionnel.",
+    icon: "error"
+}).then(function() {
+    window.location = "acci_7.html";
+});
+
+});
+
+
+    </script> 
 </html>

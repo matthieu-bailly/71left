@@ -8,6 +8,9 @@ html, body
 
 }
 
+img{
+	margin-left:20%;
+}
 
 @font-face {
 font-family: 'lato';

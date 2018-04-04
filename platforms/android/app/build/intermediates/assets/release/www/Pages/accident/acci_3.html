@@ -4,22 +4,49 @@
         <meta charset="utf-8">
         <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; connect-src *">
         <link rel="stylesheet" type="text/css" href="../../css/index.css">
+        <link rel="stylesheet" type="text/css" href="../../css/flat-ui.css">
+        <link href="../../fonts/glyphicons/flat-ui-icons-regular.ttf" rel="stylesheet" type="text/css">
         <script src="../../js/jquery-3.2.1.js"></script>
         <script src='../../js/index.js' type="text/javascript"></script>
         <script src='../../js/bddstat.js' type="text/javascript"></script>
+        <script src='../../js/sweetalert2.js' type="text/javascript"></script>
         <title>71% Left</title>
     </head>
     <body>
-        <a href="../../index.html"><img src="../../img/fleche.png" alt="fleche de redirection"/></a>
+       <!--  <a href="../../index.html"><img src="../../img/fleche.png" alt="fleche de redirection"/></a> -->
+        <li class="previous">
+            <a href="../../Niveaux.html">
+                <span class="precedent fui-arrow-left"></span>
+            </a>
+            <a href="../../index.html">
+                <span class="arrows fui-home"></span>
+            </a>
+        </li>
         <br/>
         <div class="texte_question">
         Maintenant que vous avez vérifié l’état de la victime, faut-il la sortir de son véhicule ?  
         </div>
-      <button type="button">Oui</button> 
+        <br/>
+      <button type="button" id="a31" class="answer btn btn-block btn-lg btn-info">Oui</button> 
          <br/>
          <br/>
-         <a href="acci_4.html"><button type="button">Non </button></a> 
+         <a href="acci_4.html"><button type="button" id="a30" class="answer btn btn-block btn-lg btn-info">Non</button></a> 
          <br/>
          <br/>
     </body>
+    <script type="text/javascript">
+$('#a31').click(function(){        
+swal({
+    title: "Perdu!",
+    text: "Faux ! Il ne faut sortir la victime que s’il s’agit d’un blessé léger ; dans tout autre cas, vous risquez de faire plus de mal que de bien à déplacer la victime.",
+    icon: "error"
+}).then(function() {
+    window.location = "acci_4.html";
+});
+
+});
+
+
+
+    </script> 
 </html>

@@ -6,11 +6,11 @@ $(".answer").on('click',function(){
         $.ajax({
 
       type: "POST",
-      url : 'http://venus.iut-velizy.uvsq.fr/~mbailly/php/cordova_traitement.php',
+      url : 'http://71left.iut-velizy.uvsq.fr/cordova_traitement.php',
       data : {order : $(this).attr('id')},
       success: function(retour)
       {
-        console.log(retour);
+        alert(retour);
 
       }
 
@@ -26,7 +26,7 @@ $(".done").on('click',function(){
         $.ajax({
 
       type: "POST",
-      url : 'http://venus.iut-velizy.uvsq.fr/~mbailly/php/cordova_traitement.php',
+      url : 'http://71left.iut-velizy.uvsq.fr/cordova_traitement.php',
       data : {order : $(this).attr('id')},
       success: function(retour)
       {
@@ -45,7 +45,7 @@ $(".start").on('click',function(){
         $.ajax({
 
       type: "POST",
-      url : 'http://venus.iut-velizy.uvsq.fr/~mbailly/php/cordova_traitement.php',
+      url : 'http://71left.iut-velizy.uvsq.fr/cordova_traitement.php',
       data : {order : $(this).attr('id')},
       success: function(retour)
       {
@@ -60,7 +60,7 @@ $('#pourcentage1').ready(function(){
 $.ajax({
 
       type: "POST",
-      url : 'http://venus.iut-velizy.uvsq.fr/~mbailly/php/cordova_traitement.php',
+      url : 'http://71left.iut-velizy.uvsq.fr/cordova_traitement.php',
       data : {order : "pourcentage1"},
       success: function(retour)
       {
@@ -76,7 +76,7 @@ $('#pourcentage2').ready(function(){
 $.ajax({
 
       type: "POST",
-      url : 'http://venus.iut-velizy.uvsq.fr/~mbailly/php/cordova_traitement.php',
+      url : 'http://71left.iut-velizy.uvsq.fr/cordova_traitement.php',
       data : {order : "pourcentage2"},
       success: function(retour)
       {
@@ -92,7 +92,7 @@ $('#pourcentage3').ready(function(){
 $.ajax({
 
       type: "POST",
-      url : 'http://venus.iut-velizy.uvsq.fr/~mbailly/php/cordova_traitement.php',
+      url : 'http://71left.iut-velizy.uvsq.fr/cordova_traitement.php',
       data : {order : "pourcentage3"},
       success: function(retour)
       {

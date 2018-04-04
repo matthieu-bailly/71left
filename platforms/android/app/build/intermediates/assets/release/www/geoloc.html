@@ -1,36 +1,74 @@
 <!DOCTYPE html>
-<html lang="fr">
-	<head>
-		<meta charset="UTF-8" />
-		<link rel="stylesheet" type="text/css" href="css/index.css">
-		<meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
-		<title>Localisation des différentes installations 71% Left</title>
-	</head>
-	<body>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7dYhiFnt8wm-4XE3eSPxO43cI9pkRpPI"></script>
-		<script>
-		function initialisation() //construction de notre carte
-		{
-			var optionsCarte = 
-			{
-				zoom: 9,
-				center: new google.maps.LatLng(49, 2.5) //point sur lequel la carte doit être centrée
-			};
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Localisation équipements 71%</title>
+    <style>
+    #map {
+      height:100%;
+    }
 
-			var maCarte = new google.maps.Map(document.getElementById("EmplacementDeMaCarte"), optionsCarte); //création de la carte
+    html, body{
+      height:100%;
+      margin:0;
+      padding:0;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
 
-			var optionsMarqueur = 
-			{
-				position: maCarte.getCenter(), //création d'un marqueur au centre de la carte
-				//position: new google.maps.LatLng(47.2667, -0.0833)    position un marqueur selon la longitude et lattitude
-				map: maCarte //permet de déterminer la carte sur laquelle va s'afficher notre marqueur
-			};
-			var marqueur = new google.maps.Marker(optionsMarqueur);	
-		}
-		google.maps.event.addDomListener(window, 'load', initialisation); //Permet de définir la fonction nommée initialisation  une fois que tous les éléments de la page seront chargés
-		</script>
-		<div id="EmplacementDeMaCarte"></div>
-	 	</script>
-	</body>
+      function initMap() 
+      {
+        var myLatLng = {lat: 48.775, lng: 2.225}; //initialise le centre décathlon à ces coordonnées
+        var marqueur = {lat: 48.780, lng: 2.220}; //initialise un nouveau marqueur à ces coordonnées
+        var marqueur2 = {lat: 48.789, lng: 2.2545}; //initialise un nouveau marqueur à ces coordonnées
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: myLatLng
+        }); //création de la map avec un centre défini grâce à la variable myLating
+
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: 'Vous pourrez essayer ici notre logiciel 71% Left'
+        }); //Placement d'un nouveau marqueur au centre
+
+		var marker = new google.maps.Marker({
+          position: marqueur,
+          map: map,
+          title: 'Vous pourrez essayer ici notre logiciel 71% Left'
+        }); //Placement d'un nouveau marqueur à Velizy 2
+
+        var marker = new google.maps.Marker({
+          position: marqueur2,
+          map: map,
+          title: 'Vous pourrez essayer ici notre logiciel 71% Left'
+        }); //Placement d'un nouveau marqueur à l'hopital Antoine-Béclert
+
+
+map.addListener('center_changed', function() {
+          // 3 seconds after the center of the map has changed, pan back to the
+          // marker.
+          window.setTimeout(function() {
+            map.panTo(marker.getPosition());
+          }, 1000);
+        });
+
+        marker.addListener('click', function() {
+          map.setZoom(8);
+          map.setCenter(marker.getPosition());
+        });
+
+      }
+
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7dYhiFnt8wm-4XE3eSPxO43cI9pkRpPI&callback=initMap">
+    </script>
+  </body>
 </html>
    
