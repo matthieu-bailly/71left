@@ -27,23 +27,23 @@
         En attendant les secours, vous restez auprès de la victime, le mieux à faire est :
         </div>
         <br/>
-      <button type="button" id="a61" class="answer btn btn-block btn-lg btn-info">Ne rien faire</button>  
+      <button type="button" id="a61" class="wrong answer btn btn-block btn-lg btn-info">Ne rien faire</button>  
          <br/>
          <br/>
 
-         <button type="button" id="a60" class="answer btn btn-block btn-lg btn-info">Couvrir la personne </button> 
+         <a href="acci_7.html"><button type="button" id="a60" class="answer btn btn-block btn-lg btn-info">Couvrir la personne </button></a>
 
          <br/>
          <br/>
-         <button type="button" id="a61" class="answer btn btn-block btn-lg btn-info">Faire boire la victime </button> 
+         <button type="button" id="a61" class="wrong answer btn btn-block btn-lg btn-info">Faire boire la victime </button> 
          <br/>
          <br/>
-         <button type="button" id="a61" class="answer btn btn-block btn-lg btn-info">Chercher les blessures de la victime </button>
+         <button type="button" id="a61" class="wrong answer btn btn-block btn-lg btn-info">Chercher les blessures de la victime </button>
          <br/>
          <br/>
     </body>
     <script type="text/javascript">
-$('#a61').click(function(){        
+$('.wrong').click(function(){        
 swal({
     title: "Perdu!",
     text: "La seule bonne chose à faire dans ce cas est de couvrir la victime afin de prévenir tout risque d’hypothermie. Faire boire ou chercher les blessures de la victime sont des actions trop risquées pour un non-professionnel.",
