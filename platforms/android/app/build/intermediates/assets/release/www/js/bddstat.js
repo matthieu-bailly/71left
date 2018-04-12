@@ -1,16 +1,32 @@
 $(document).ready(function(){
 
-$(".answer").on('click',function(){
+sonBouton = new Audio('../../res/bouton.wav');
 
+
+$(".answer").on('click',function(){
+sonBouton.play();
+
+$.ajax({
+
+      type: "POST",
+      url : 'http://71left.iut-velizy.uvsq.fr/cordova_traitement.php',
+      data : {order : "test"},
+      success: function(retour)
+      {
+          console.log(retour);
+
+      }
+
+    });
         
         $.ajax({
 
       type: "POST",
-      url : 'http://venus.iut-velizy.uvsq.fr/~mbailly/php/cordova_traitement.php',
+      url : 'http://71left.iut-velizy.uvsq.fr/cordova_traitement.php',
       data : {order : $(this).attr('id')},
       success: function(retour)
       {
-        console.log(retour);
+   
 
       }
 
@@ -20,18 +36,23 @@ $(".answer").on('click',function(){
 
 $(".done").on('click',function(){
 
-
+sonBouton.play();
 
         
         $.ajax({
 
       type: "POST",
-      url : 'http://venus.iut-velizy.uvsq.fr/~mbailly/php/cordova_traitement.php',
+      url : 'http://71left.iut-velizy.uvsq.fr/cordova_traitement.php',
       data : {order : $(this).attr('id')},
       success: function(retour)
       {
-        alert(retour);
-
+        swal({
+    title: "Terminé !",
+    text: "Vos réponses ont été envoyés à la base de données.",
+    icon: "success"
+}).then(function() {
+    window.location = "../../index.html";
+});
       }
 
     });
@@ -39,17 +60,17 @@ $(".done").on('click',function(){
 
 $(".start").on('click',function(){
 
-
+sonBouton.play();
 
         
         $.ajax({
 
       type: "POST",
-      url : 'http://venus.iut-velizy.uvsq.fr/~mbailly/php/cordova_traitement.php',
+      url : 'http://71left.iut-velizy.uvsq.fr/cordova_traitement.php',
       data : {order : $(this).attr('id')},
       success: function(retour)
       {
-        alert(retour);
+        
 
       }
 
@@ -60,11 +81,12 @@ $('#pourcentage1').ready(function(){
 $.ajax({
 
       type: "POST",
-      url : 'http://venus.iut-velizy.uvsq.fr/~mbailly/php/cordova_traitement.php',
+      url : 'http://71left.iut-velizy.uvsq.fr/cordova_traitement.php',
       data : {order : "pourcentage1"},
       success: function(retour)
       {
-        $(this).html(retour);
+        $('#pourcentage1').text(retour);
+        $('#pourcentage1').append('%');
 
       }
 
@@ -76,11 +98,12 @@ $('#pourcentage2').ready(function(){
 $.ajax({
 
       type: "POST",
-      url : 'http://venus.iut-velizy.uvsq.fr/~mbailly/php/cordova_traitement.php',
+      url : 'http://71left.iut-velizy.uvsq.fr/cordova_traitement.php',
       data : {order : "pourcentage2"},
       success: function(retour)
       {
-        $(this).html(retour);
+        $('#pourcentage2').text(retour);
+        $('#pourcentage2').append('%');
 
       }
 
@@ -92,11 +115,12 @@ $('#pourcentage3').ready(function(){
 $.ajax({
 
       type: "POST",
-      url : 'http://venus.iut-velizy.uvsq.fr/~mbailly/php/cordova_traitement.php',
+      url : 'http://71left.iut-velizy.uvsq.fr/cordova_traitement.php',
       data : {order : "pourcentage3"},
       success: function(retour)
       {
-        $(this).html(retour);
+        $('#pourcentage3').text(retour);
+        $('#pourcentage3').append('%');
 
       }
 

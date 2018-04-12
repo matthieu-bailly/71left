@@ -12,7 +12,7 @@
     </head>
     <body>
         <h1 id="titremenu">71% LEFT</h1>
-         <a href="Niveaux.html"><button type="button" id='launch_acci' class="btn btn-danger btn-lg btn-block">Niveaux</button></a> 
+         <a href="Niveaux.html"><button type="button" id='launch_acci' class="btn btn-danger btn-lg btn-block">Situations d'urgence</button></a> 
          <br/>
          <a href="Tutoriels.html"><button type="button" class="btn btn-block btn-lg btn-info">Tutoriels</button></a>
          <br/>
@@ -20,6 +20,17 @@
          <br/>
          <a href="Crédits.html"><button type="button" class="btn btn-block btn-lg btn-info">Crédits</button></a>
          <br/>
-         <a href="geoloc.html"><button type="button" class="btn btn-block btn-lg btn-info">Localisation</button></a>
+         <a href="geoloc.html"><button type="button" class="btn btn-block btn-lg btn-info">Où tester notre logiciel ?</button></a>
     </body>
+        <script type="text/javascript">
+            sonCoeur = new Audio('res/coeur.wav');
+            sonCoeur.addEventListener('ended', function() {
+            this.currentTime = 0;
+            this.play();
+            }, false);
+            sonCoeur.play();
+
+
+            </script> 
+
 </html>

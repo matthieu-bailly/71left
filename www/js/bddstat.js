@@ -1,7 +1,10 @@
 $(document).ready(function(){
 
-$(".answer").on('click',function(){
+sonBouton = new Audio('../../res/bouton.wav');
 
+
+$(".answer").on('click',function(){
+sonBouton.play();
 
 $.ajax({
 
@@ -33,7 +36,7 @@ $.ajax({
 
 $(".done").on('click',function(){
 
-
+sonBouton.play();
 
         
         $.ajax({
@@ -57,7 +60,7 @@ $(".done").on('click',function(){
 
 $(".start").on('click',function(){
 
-
+sonBouton.play();
 
         
         $.ajax({
